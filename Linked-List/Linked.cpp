@@ -12,14 +12,14 @@ Linked::Linked(){
 }
 
 void Linked::add_node(int addData) {
-	nodepointer n = new node; //nodepointer n points to new node
-	n->next = NULL; // find the node n is pointing to and access its next element and set it to nothing
+	nodepointer n = new node; 
+	n->next = NULL; 
 	n->data = addData;
 
 	if (head != NULL) {
-		curr = head; // curr pointer point to the head (front of list)
-		while (curr->next != NULL) { // while the node that curr is pointing to not connected to NULL
-			curr = curr->next; // make curr point to the node that the current node of curr is pointing to
+		curr = head; 
+		while (curr->next != NULL) { 
+			curr = curr->next; 
 		}
 		curr->next = n; 
 	}
@@ -51,7 +51,7 @@ void Linked::delete_node(int delData) {
 			temp = NULL;
 		}
 		delete deletionpointer;
-		cout << "The value " << delData << " was deleted.\n";
+		cout << delData << " was deleted from the list.\n";
 	}
 }
 
